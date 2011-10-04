@@ -1,5 +1,5 @@
 var cluster = require('cluster');
-var conf = require('./lib/conf');
+var conf = require('./conf');
 
 cluster('./app')
   .set('workers', 1)
