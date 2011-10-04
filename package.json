@@ -1,0 +1,11 @@
+{
+    "name": "FreedomConnector"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.4.2"
+    , "cluster": "0.7.5"
+    , "less": ">= 0.0.1"
+    , "jqtpl": ">= 0.0.1"
+  }
+}

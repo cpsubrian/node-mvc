@@ -1,0 +1,4 @@
+logs/*
+pids/*
+public/css/*.css
+node_modules/*
