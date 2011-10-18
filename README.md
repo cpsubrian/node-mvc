@@ -65,7 +65,7 @@ contains constructor functions for all the models in `models/`.  So, if one
 of your models is `models/Book.js`, you would create an instance of a Book in
 one of your controllers like so:
 
-    var book = app.models.Book();
+    var book = new app.models.Book();
 
 ## Sample Controller
 
