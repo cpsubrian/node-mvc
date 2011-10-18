@@ -1,7 +1,8 @@
 /**
- * Application helpers.  These are available in all rendered template.
+ * Enabled scripts for the application front-end.
  */
 module.exports = function(app) {
+  
   var scripts = {
     'head': [
       'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js',
@@ -14,15 +15,12 @@ module.exports = function(app) {
       'http://html5shim.googlecode.com/svn/trunk/html5.js',
     ],
     'footer': [
-      '/js/main.js'       
+      '/js/main.js'
     ]
   };
   
   /* Static helpers. */
-  app.helpers({
-    // Application title.
-    title: app.conf.title,  
-    
+  app.helpers({    
     // Return scripts from settings.js
     headScripts: function() {
       return scripts['head'].map(function(src) {
@@ -36,6 +34,4 @@ module.exports = function(app) {
     }
   });
   
-  /* Dynamic helpers. */
-  //app.dynamicHelpers({});
 }

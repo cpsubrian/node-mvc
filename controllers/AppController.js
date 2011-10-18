@@ -1,22 +1,25 @@
 /**
  * Application Controller.
  */
-var AppController = module.exports = function(app) {
-  // Routes.
-  app.get('/', this.index);
-}
-
-/**
- * Methods and properties.
- */
-AppController.prototype = {
+module.exports = function(app) {
+  
+  /**
+   * Controller Constructor.
+   */
+  var AppController = function() {
+    app.util.bindAll(this);
+    
+    // Routes.
+    app.get('/', this.index);
+  }
   
   /**
    * Index. 
    */
-  index: function(req, res) {
-    res.render('index');
+  AppController.prototype.index = function(req, res) {
+      res.render('index');
   }
   
-};
+  return AppController;
+}
 
