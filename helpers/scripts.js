@@ -21,17 +21,21 @@ module.exports = function(app) {
   
   /* Static helpers. */
   app.helpers({    
-    // Return scripts from settings.js
+    
+    // Scripts for the <head> tag.
     headScripts: function() {
       return scripts['head'].map(function(src) {
         return '<script type="text/javascript" src="' + src + '"></script>'
       }).join("\n");
     },
+    
+    // Scripts to go at the bottom of <body>.
     footerScripts: function(req, res) {
       return scripts['footer'].map(function(src) {
         return '<script type="text/javascript" src="' + src + '"></script>'
       }).join("\n");
     }
+    
   });
   
 }

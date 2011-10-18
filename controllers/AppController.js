@@ -22,4 +22,3 @@ module.exports = function(app) {
   
   return AppController;
 }
-
